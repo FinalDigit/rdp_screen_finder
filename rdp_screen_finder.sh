@@ -7,7 +7,7 @@
 echo "[*] Starting RDP Screen Finder script"
 
 # Get hosts with port 3389 open
-rdpHosts=$(nmap -p 3389 12.137.109.0/24 -oG - | grep open | awk '{ print $2}');
+rdpHosts=$(nmap -p 3389 10.138.109.0/24 -oG - | grep open | awk '{ print $2}');
 echo "$rdpHosts"
 
 for i in $rdpHosts;
